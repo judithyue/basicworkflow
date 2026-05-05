@@ -10,7 +10,7 @@ terraform {
   }
 }
 
-resource "aws_s3_bucket" "ju_new_bucket" {
+resource "aws_s3_bucket" "juju_new_bucket" {
   bucket = "my-unique-bucket-name-12345" # Replace with a globally unique name
 
   tags = {
@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "ju_new_bucket" {
 
 # Optional: Enable versioning
 resource "aws_s3_bucket_versioning" "versioning_example" {
-  bucket = aws_s3_bucket.ju_new_bucket.id
+  bucket = aws_s3_bucket.juju_new_bucket.id
   versioning_configuration {
     status = "Enabled"
   }
