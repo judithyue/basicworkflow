@@ -11,7 +11,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "juju_new_bucket" {
-  bucket = "my-unique-bucket-name-12345" # Replace with a globally unique name
+  bucket = "ju-bucket-name-12345" # Replace with a globally unique name
 
   tags = {
     Name        = "My Terraform Bucket"
