@@ -1,0 +1,19 @@
+name: Destroy Terraform Resources
+run-name: ${{ github.actor }} is destroying Terraform resources 🚀
+on:
+  workflow_dispatch:
+jobs:
+  destroy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+      
+      - name: Terraform Init
+        run: terraform init
+      
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
