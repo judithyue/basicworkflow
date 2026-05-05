@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "ju_new_bucket" {
 
 # Optional: Enable versioning
 resource "aws_s3_bucket_versioning" "versioning_example" {
-  bucket = aws_s3_bucket.my_new_bucket.id
+  bucket = aws_s3_bucket.ju_new_bucket.id
   versioning_configuration {
     status = "Enabled"
   }
@@ -29,7 +29,7 @@ resource "aws_s3_bucket_versioning" "versioning_example" {
 
 # Optional: Enable server-side encryption
 resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
-  bucket = aws_s3_bucket.my_new_bucket.id
+  bucket = aws_s3_bucket.ju_new_bucket.id
 
   rule {
     apply_server_side_encryption_by_default {
